@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+ 
+ 	<welcome-file-list>
+        <welcome-file>home.jsp</welcome-file>
+    </welcome-file-list> 
+ 
+ 	<servlet>
+     	<servlet-name>addStdLoan</servlet-name>
+     	<servlet-class>servlet.addStdLoan</servlet-class>
+     </servlet>
+     <servlet-mapping>
+     	<servlet-name>addStdLoan</servlet-name>
+     	<url-pattern>/addStd</url-pattern>
+     </servlet-mapping>
+     
+     <servlet>
+     	<servlet-name>LoanManagerLoans</servlet-name>
+     	<servlet-class>servlet.LoanManagerLoans</servlet-class>
+     </servlet>
+     <servlet-mapping>
+     	<servlet-name>LoanManagerLoans</servlet-name>
+     	<url-pattern>/loanmanage</url-pattern>
+     </servlet-mapping>
+     
+     <servlet>
+     	<servlet-name>updateData</servlet-name>
+     	<servlet-class>servlet.updateData</servlet-class>
+     </servlet>
+     <servlet-mapping>
+     	<servlet-name>updateData</servlet-name>
+     	<url-pattern>/updatedata</url-pattern>
+     </servlet-mapping>
+     
+     <servlet>
+     	<servlet-name>deleteLoans</servlet-name>
+     	<servlet-class>servlet.deleteLoans</servlet-class>
+     </servlet>
+     <servlet-mapping>
+     	<servlet-name>deleteLoans</servlet-name>
+     	<url-pattern>/deleteloan</url-pattern>
+     </servlet-mapping>
+ 	
+</web-app>

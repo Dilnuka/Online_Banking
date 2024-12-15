@@ -1,0 +1,491 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #242424;
+    background-image: url(./img/back2.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  background: #111111;
+  padding: 20px 10px; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+ 
+  position: sticky;
+  top: 0;
+  gap: 10px;
+ 
+  width: 100%;
+  z-index: 1000;
+  
+}
+
+
+nav a.active {
+    color: #1499f1; 
+    font-weight: bold;  
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1499f1;
+}
+
+
+.nav2{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  margin-left: 100px;
+}
+
+/* Links styling */
+nav a {
+  margin: 0 20px;
+  color: rgb(247, 247, 247);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #1499f1;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1499f1;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%; 
+}
+
+nav a:hover {
+  color: #1499f1;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background: rgba(22, 22, 22, 0.7);
+  backdrop-filter: blur(50px); 
+  -webkit-backdrop-filter: blur(50px); 
+  padding: 10px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+  align-items: start;
+  text-align: left;
+}
+
+
+.dropdown-menu a {
+  display: block;
+  color: rgb(214, 214, 214);
+  padding: 10px 0;
+
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  color: #1499f1;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+.proName{
+  margin-right: 20px;
+ color: #ccc;
+ font-weight: lighter;
+ margin-top: 10px;
+}
+
+
+/* Profile Picture */
+.profile-pic {
+  
+  display: flex;
+  flex-direction: row;
+  margin-right:50px ;
+}
+
+.profile-pic img {
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%; 
+  border: 2px solid #1499f1; 
+  object-fit: cover; 
+}
+
+
+/* Auth Buttons in Nav */
+.auth-buttons {
+display: flex;
+gap: 15px;
+align-items: center;
+}
+
+.auth-buttons .btn {
+padding: 10px 20px;
+border-radius: 8px;
+font-size: 14px;
+font-weight: 500;
+text-decoration: none;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Sign Up Button */
+.auth-buttons .btn-outline {
+background-color: transparent;
+border: 2px solid #1499f1;
+color: #1499f1;
+}
+
+.auth-buttons .btn-outline:hover {
+background-color: #1499f1;
+color: white;
+}
+
+/* Sign In Button */
+.auth-buttons .btn-primary {
+background-color: #1499f1;
+color: white;
+border: none;
+}
+
+.auth-buttons .btn-primary:hover {
+background-color: #005fa3;
+}
+
+h1, h2, h3 {
+    color: #dadada;
+}
+
+.hero-section p {
+    color: #acacac;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background-image: url(./img/top-view-economy-concept-with-copy-space.png);
+    background-position: 150px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: center; 
+    color: white;
+    text-align: left;
+    padding-left: 10%; 
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+/* Hero Section Animation */
+.hero-section .hero-content {
+  opacity: 0;
+  transform: translateY(50px); 
+  animation: fadeInUp 3s forwards; 
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+#subTitle{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 64px;
+    margin-top: -25px;
+
+}
+
+/* Ensure btn-container is relatively positioned */
+.btn-container {
+    display: flex; 
+    gap: 20px;
+    align-items: center; 
+    justify-content: center;
+    position: relative; 
+}
+
+
+.btn-container form {
+    margin: 0;              
+}
+
+
+
+/* Loan Intro Section */
+.loan-intro {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 80px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.loan-intro h2 {
+
+  margin-bottom: 10px;
+  font-weight: 200;
+  font-size: xxx-large;
+  color: #656565;
+}
+
+.loan-intro p {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin: 0 25%;
+  color: #696969;
+  margin-bottom: 150px;
+
+}
+
+
+
+
+
+
+/* Loan Description Section */
+.loan-description {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.loan-description h2 {
+    color: #535353;
+}
+
+
+.apply{
+
+  width: 40%;
+  background-color: #1499f1;
+  border: none;
+  border-radius: 10px;
+  color: #fdfdfd;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+
+
+.apply:hover {
+  background-color: #3b8fcb;
+  transform: scale(1.1);
+}
+
+.loan-types {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.loan-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 320px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.loan-card p{
+
+    color: #6e6e6e;
+}
+
+.loan-card h3{
+
+    color: #696969;
+}
+
+
+/* Loan Card Hover Effect */
+.loan-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  width: 320px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loan-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+}
+
+/* Loan Card Icon Hover */
+.loan-card .icon img {
+  transition: transform 0.3s ease;
+}
+
+.loan-card:hover .icon img {
+  transform: scale(1.1);
+}
+
+/* Loan Application Form Section */
+.loan-application {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+select, input[type="text"], input[type="number"], button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+
+#loanForm {
+    display: none;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+
+.footer {
+  background-color: #111111;
+  color: white;
+  padding: 40px 20px;
+  text-align: left;
+  margin-top: 80px;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #1499f1;
+  font-weight: 200;
+}
+
+.footer-section p, .footer-section ul, .footer-section li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #acacac;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #acacac;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #1499f1;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}

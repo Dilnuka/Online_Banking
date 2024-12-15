@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.log_con {
+    display: flex;
+    width: 80%;
+    height: 100vh;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    border-radius: 25px;
+    margin-top: 100px;
+    
+}
+
+.left-side {
+    flex: 1;
+}
+
+.left-side img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.right-side input, .right-side button {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.right-side button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.right-side button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.right-side form{
+    margin: 40px;
+    text-align: center;
+   align-items: center;
+   justify-content: center;
+}
+.right-side form h2{
+    margin-bottom: 20px;
+    color: rgb(52, 52, 52);
+    font-size: 25px;
+ }
+
+
+.loan-form {
+    align-items: center;
+    border-radius: 5px; 
+    max-width: 500px;
+    margin: auto;
+}
+
+form{
+    padding: 40px;
+    align-items: center;
+}
+
+.loan-form h2 {
+   
+    margin-bottom: 20px;
+}
+
+.loan-form label {
+    display: block;
+    text-align: left;
+    align-items: first baseline;
+    margin: 10px 0 5px;
+}
+
+.loan-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width:max-content;
+    padding: 10px;
+    background-color:  rgb(86, 145, 255);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: rgb(54, 109, 210);
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 50px;
+}
+
+.half-width {
+    width: 48%; /* Adjusts the width to fit two fields in one row */
+}
+
+.loan-form input {
+    width: 100%; /* Ensures inputs fill their container */
+}
+
+
+/* Style for input and select fields */
+.loan-form input, .loan-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Style for the select dropdown */
+.loan-form select {
+    -webkit-appearance: none; /* Remove default dropdown arrow in Safari */
+    -moz-appearance: none; /* Remove default dropdown arrow in Firefox */
+    appearance: none; /* Remove default dropdown arrow in modern browsers */
+    background-color: white;
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill%3D%22%23ccc%22%20d%3D%22M8%2010.293L3.707%205.707%204.293%205.121%208%208.828%2011.707%205.121%2012.293%205.707%208%2010.293z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+
+
+/* Style for radio button container */
+.radio-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-size: 14px;
+}
+
+/* Style for each radio button label */
+.radio-buttons label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Style for the radio button itself */
+.radio-buttons input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Adjusting the size of the radio button */
+.radio-buttons input[type="radio"]:checked {
+    accent-color: #007bff; /* Change color when checked */
+}
+
+
